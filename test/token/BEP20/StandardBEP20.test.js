@@ -1,6 +1,6 @@
 const { BN, ether, expectRevert } = require('@openzeppelin/test-helpers');
 
-const { shouldBehaveLikeBEP20 } = require('./behaviours/BEP20.behaviour');
+const { shouldBehaveLikeBEP20 } = require('./behaviors/BEP20.behavior');
 
 const StandardBEP20 = artifacts.require('StandardBEP20');
 const ServiceReceiver = artifacts.require('ServiceReceiver');
@@ -67,7 +67,7 @@ contract('StandardBEP20', function ([owner, other, thirdParty]) {
     });
   });
 
-  context('StandardBEP20 token behaviours', function () {
+  context('StandardBEP20 token behaviors', function () {
     beforeEach(async function () {
       this.token = await StandardBEP20.new(
         _name,

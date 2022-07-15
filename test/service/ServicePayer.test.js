@@ -9,7 +9,7 @@ const ServiceReceiver = artifacts.require('ServiceReceiver');
 contract('ServicePayer', function ([owner, thirdParty]) {
   const fee = ether('0.1');
 
-  context('ServicePayer behaviours', function () {
+  context('ServicePayer behaviors', function () {
     beforeEach(async function () {
       this.serviceReceiver = await ServiceReceiver.new({ from: owner });
 

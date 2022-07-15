@@ -8,7 +8,7 @@ function shouldBehaveLikeBEP20Mintable (initialBalance, [minter, thirdParty]) {
 
     const from = minter;
 
-    context('behaviours', function () {
+    context('behaviors', function () {
       it('rejects a null account', async function () {
         await expectRevert(
           this.token.mint(ZERO_ADDRESS, amount, { from: minter }),

@@ -1,8 +1,8 @@
 const { BN, expectRevert } = require('@openzeppelin/test-helpers');
 
-const { shouldBehaveLikeBEP20 } = require('./behaviours/BEP20.behaviour');
+const { shouldBehaveLikeBEP20 } = require('./behaviors/BEP20.behavior');
 
-const { shouldBehaveLikeGeneratorCopyright } = require('../../utils/GeneratorCopyright.behaviour');
+const { shouldBehaveLikeGeneratorCopyright } = require('../../utils/GeneratorCopyright.behavior');
 
 const SimpleBEP20 = artifacts.require('SimpleBEP20');
 const ServiceReceiver = artifacts.require('ServiceReceiver');
@@ -68,7 +68,7 @@ contract('SimpleBEP20', function ([owner, other, thirdParty]) {
     });
   });
 
-  context('SimpleBEP20 token behaviours', function () {
+  context('SimpleBEP20 token behaviors', function () {
     beforeEach(async function () {
       this.token = await SimpleBEP20.new(
         _name,

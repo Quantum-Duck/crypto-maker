@@ -724,7 +724,7 @@ pragma solidity ^0.7.0;
 
 /**
  * @title BEP20Mintable
- * @dev Implementation of the BEP20Mintable. Extension of {BEP20} that adds a minting behaviour.
+ * @dev Implementation of the BEP20Mintable. Extension of {BEP20} that adds a minting behavior.
  */
 abstract contract BEP20Mintable is BEP20 {
 

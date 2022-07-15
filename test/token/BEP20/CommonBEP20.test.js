@@ -1,9 +1,9 @@
 const { BN, ether, expectRevert } = require('@openzeppelin/test-helpers');
 
-const { shouldBehaveLikeBEP20 } = require('./behaviours/BEP20.behaviour');
-const { shouldBehaveLikeBEP20Burnable } = require('./behaviours/BEP20Burnable.behaviour');
-const { shouldBehaveLikeBEP20Capped } = require('./behaviours/BEP20Capped.behaviour');
-const { shouldBehaveLikeBEP20Mintable } = require('./behaviours/BEP20Mintable.behaviour');
+const { shouldBehaveLikeBEP20 } = require('./behaviors/BEP20.behavior');
+const { shouldBehaveLikeBEP20Burnable } = require('./behaviors/BEP20Burnable.behavior');
+const { shouldBehaveLikeBEP20Capped } = require('./behaviors/BEP20Capped.behavior');
+const { shouldBehaveLikeBEP20Mintable } = require('./behaviors/BEP20Mintable.behavior');
 
 const CommonBEP20 = artifacts.require('CommonBEP20');
 const ServiceReceiver = artifacts.require('ServiceReceiver');
@@ -100,7 +100,7 @@ contract('CommonBEP20', function ([owner, other, thirdParty]) {
     });
   });
 
-  context('CommonBEP20 token behaviours', function () {
+  context('CommonBEP20 token behaviors', function () {
     beforeEach(async function () {
       this.token = await CommonBEP20.new(
         _name,
